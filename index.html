@@ -1,53 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pizza Place</title>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Lakki+Reddy|Merriweather&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed|Lakki+Reddy|Merriweather&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
+    <title>PIZZA PALACE</title>
 </head>
-
 <body>
-    <div class="home">
-      <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-sm-12 col-lg-12">
-          <h1>PIZZA PALACE</h1>
-           <p>The homemade pizza dough is produced in-house daily and is another reason why the pizza at Pizza</p>
-         </p>Palace always tastes better.The Twisty Bread, the signature Wingz and the delicious Double Meal</P>
-       <p>are additional value-for-money options that keep our satisfied customers coming back time after time </p>
-       <p> These are the meals that have made our Terrific Mondays everyone’s favourite day of the week.</p>
-        <p><When entertaining, a Hawaiian, a Regina, or a Peri Peri Chicken pizza from Pizza Palace is the 
-       <p> obvious and perfect option to please crowds of all ages.</p>
+    <nav class="navbar" id="navbar">
+        <h1 class="nav-text">Pizza palace</h1>
+    <ul class="list">
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#order">Order</a></li>
+        <li><a href="#contacts">Contacts</a></li>
+    </ul>
+    </nav>
 
-       <p>DELICIOUS PIZZA</p>
-       <img src="pizza.jpg">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <a href="index2.html"> <button type="button" id="btn">PLACE ORDER</button></a>
-                    <img src="https://www.giovannispizzeria.net/images/reward.png">
-                </div>
-            </div>
-            <div class="footer>
-                <div class="footer">
-                    <p>HOSEA PIZZA 2022</p>
-                </div>
-
-            </div>
+    <section class="about">
+        <div id="about-us">
+            <h2><b>About Us</b></h2>
+            <p> Pizza palace is a company located in Thika Superhighway</p>
+                 We offer mostly fast foods like pizza.
+                <P>Our restaurant offers also fast foods like cheese ,Chipos and drinks like soda we are capable of providing our</P>
+                <p>our customers the best services as we can</p>
+                <P>Take you time to order the service and we will serve you in time </P>
         </div>
-    </div>
-    <!-- javascript links -->
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <script src="js/scripts.js"></script>
-</body>
 
+    </section>
+   
+  <form class="form-group" id="menu">
+    <div class="controls-top text-center" id="menu">
+      <h2>Check orders here</h2>
+    </div>
+    <div class="order">
+      <div class="row">
+        <div class="col-md-4 col-xs-9">
+          <div class="card">
+            <img src="pizza.jpg" class="card-img-top" alt="PIZZA">
+            <div class="card-body">
+              <h5 class="card-title">Pizza Quantity</h5>
+              <p class="card-text">Choose what Size you want:</p>
+              <select required class="form-control" id="size">
+                <option></option>
+                <option value="small-pizza">small (450)</option>
+                <option value="medium-pizza">medium (850)</option>
+                <option value="large-pizza">large (1000)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-xs-9">
+          <div class="card">
+            <img src="images/pizza-5179939.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Type of Crust</h5>
+              <p class="card-text">Choose what crust you want:</p>
+              <select required class="form-control" id="crust">
+                <option></option>
+
+                <option value="thick">Thick crust 100)</option>
+                <option value="cheese-filled">Cheese filled (250)</option>
+                <option value="crispy">Crispy crust (100)</option>
+                <option value="stuffed">Stuffed (150)</option>
+                <option value="thin">Thin crust (150)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-xs-9">
+          <div class="card">
+            <img src="images/pizza-5107039.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Meals</h5>
+              <p class="card-text">Choose the toppings you want:</p>
+              <select required class="form-control" id="toppings">
+                <option></option>
+                <option value="chicken">Cheese (270</option>
+                <option value="chipo">chipo (150)</option>
+                <option value="meat">chicken meat (170)</option>
+                <option value="Juices">JUices(85)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><br><br>
+    <button type="submit" class="order-button btn btn-dark" id="submit-pizza">Order Here</button>
+    <input type="number" id="amount" placeholder="Quantity of pizza" required>
+  </form>
+  <div class="col-xs-4" id="order">
+    <h2>Price: Ksh <span id="final-cost"></span></h2><br><br>
+    <div id="deliver" class="deliver">
+      <h5>If in need you need delivery you sent your boda boda</h5><br>
+      <form id="address-form">
+        <div class="col-xs-6">
+          <label for="first-name"></label>
+          <input id="location" type="text" size="40" placeholder="Where should we deliver?.." required />
+          <button class="btn btn-dark complete" type="submit">Enter</button>
+          <h3><span id="delivery-option"></span></h3>
+        </div>
+
+      </form>
+    </div><br>
+    <button type="btn" class="btn btn-dark" id="checkout-btn">Checkout</button><br><br>
+    <div id="order-details" class="col-xs-12">
+      <ul id="pizza-details">
+        <strong>Your order is as follows: </strong>
+      </ul>
+      <h5 id="pizza-details">
+            Congratulations for shopping through our name ,happy times in your life as you continue shopping with us </h5>
+    </div>
+  </div>
+  <br>
+  <div class="container-fluid bg-default" id="contact">
+    <div class="controls-top ">
+      <h2>Contact Us</h2>
+      <p>Tell:0823078300</p>
+    </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="row">
+      <div class="container text-center footer">
+        <p> THIKA ROAD PIZZA PALACE WECOME </p>
+      </div>
+    </div>
+  </div>
+
+  <script 
 </html>
