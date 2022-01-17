@@ -11,16 +11,6 @@ their servcies in time.
 
 HOSEA KIPKEMOI KIMUTAI
 
-# TECHNOLOGIES USED
-
-HTML
-
-CSS
-
-BOOTSRAP
-
-JS
-
 ## PAGE LINK
 
 https://kemboihosea.github.io/PIZZA-IN-SYSTEM/
@@ -28,8 +18,7 @@ https://kemboihosea.github.io/PIZZA-IN-SYSTEM/
 
 ## LICENCE
 
-<<<<<<< HEAD
+
 MIT
-=======
-MIT
->>>>>>> 9f060b981fa8caf3d14a4eab2c202a6d7b3e5ab6
+
+
