@@ -1,29 +1,32 @@
 body {
     font-family: 'Roboto' sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 /* navbar styles */
 .navbar{
-    background-image: url('https://pngimg.com/uploads/pizza/pizza_PNG44089.png');
     display: flex;
     align-items: center;
-    padding-bottom: 650px;
+    padding-bottom: auto;
     justify-content: center;
     top: 0px;
-    background-color: green;
+    background-color:rgb(134, 24, 46);
     overflow: hidden;
     cursor: pointer;
-    
+    height: 30px;
     
 }
 .nav-text{
-    color: yellow;
+    color:crimsonrgb(134, 24, 46);
 }
 .list{
-    width: 50%;
+    list-style: none;
+    width: 50;
     display: flex;
     position: sticky;
 }
 li{
+    list-style: none;
     display: inline;
     padding: 20px 20px;
 }
@@ -33,13 +36,23 @@ a{
 }
 
 /* about us styles */
-.about{
+section{
     text-align: center;
     background-image: url('images/pizza-3010062.jpg');
+    display: flex;
+    align-items: center ;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
 }
-.about p{
-    font-size: 20px;
-    font-family:sans-serif ;
+section p {
+    width: 80%;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+section .right{
+    width: 200px;
+    height: 300x;
 }
 
 /* pizza images styles */
@@ -64,7 +77,7 @@ a{
     height: 30vh;
 }
 #contact{
-    background-color: aqua;
+    background-color:rgb(134, 24, 46);
     text-align: center;
     font-size: 20px;
     padding: 50px;
@@ -77,4 +90,16 @@ a{
 }
 #submit-pizza{
     font-size: 20px;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2em;
+    align-items: center;
+    padding: 0 2em;
+}
+.card-img-top{
+    width: 9em;
+    height: auto;
 }
