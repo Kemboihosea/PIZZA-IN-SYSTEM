@@ -18,4 +18,8 @@ https://kemboihosea.github.io/PIZZA-IN-SYSTEM/
 
 ## LICENCE
 
+<<<<<<< HEAD
 MIT
+=======
+MIT
+>>>>>>> 9f060b981fa8caf3d14a4eab2c202a6d7b3e5ab6
