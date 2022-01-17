@@ -11,6 +11,16 @@ their servcies in time.
 
 HOSEA KIPKEMOI KIMUTAI
 
+# TECHNOLOGIES USED
+
+HTML
+
+CSS
+
+BOOTSRAP
+
+JS
+
 ## PAGE LINK
 
 https://kemboihosea.github.io/PIZZA-IN-SYSTEM/
