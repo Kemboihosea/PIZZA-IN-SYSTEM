@@ -1,5 +1,7 @@
 # PIZZA-IN-SYSTEM
 
+Welcome all our esteemed customers
+
 ## DESCRIPTION
 
 This is a fast food restaurant ,it allows customers to order their food and get 
@@ -15,4 +17,5 @@ https://kemboihosea.github.io/PIZZA-IN-SYSTEM/
 
 
 ## LICENCE
+
 MIT
