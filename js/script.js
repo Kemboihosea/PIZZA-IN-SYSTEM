@@ -3,13 +3,15 @@ let total = 0;
 function getorders( name,size,crust,topping, total ){
   this.name = name;
   this.size = size;
+  this.chrust=chrust;
+  this.cheese=cheese;
 }
 // proceed button
 $(document).ready(function
   $("button.proceed").click(function(event){
    let name = $(".name option:selected").val();
-   let psize = $("#size option:selected").val();
-   let crust = $("#crust option:selected").val();
+   let size = $("#size option:selected").val();
+   let chrust = $("#crust option:selected").val();
    let topping = [];
    $.each($("input[name='toppings']:checked"), function(){            
        topping.push($(this).val());
@@ -34,18 +36,18 @@ $(document).ready(function
      default:
        console.log("error"); 
    }
-   switch(pcrust){
+   switch(chrust){
       case "0":
-        crust_price = 0;
+        chrust_price = 0;
       break;
       case "Crispy":
-        crust_price = 200;
+        chrust_price = 200;
       break;
       case "Stuffed":
-        crust_price = 250;
+        chrust_price = 250;
       break;
       case "Gluten-free":
-        crust_price = 180;
+        chrust_price = 180;
       break;
       default:
         console.log("No price"); 
@@ -53,19 +55,18 @@ $(document).ready(function
     let topping_value = topping.length*50;
     console.log("toppins value" + topping_value);
 
-    if((size == "0") && (crust == "0")){
+    if((size == "0") && (chrust == "0")){
       console.log("nothing selected");
       $("button.proceed").show();
       $("#information").show();
       $("div.choise").hide();
-      alert("Please select pizza size and crust"); 
+      alert("Please select pizza size and chrust"); 
     }
     else{
       $("button.proceed").hide();
       $("#information").hide();
       $("div.choise").slideDown(1000);
     }
-
     total = price + crust
     console.log(total);
     let checkoutTotal =0;
