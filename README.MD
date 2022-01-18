@@ -17,8 +17,11 @@ https://kemboihosea.github.io/PIZZA-IN-SYSTEM/
 
 ## TECHNOLOGIES USED
 HTML
+
 CSS
+
 BOOSTRAP
+
 JAVASCRIPT
 
 ## LICENCE
