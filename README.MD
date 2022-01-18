@@ -15,6 +15,17 @@ HOSEA KIPKEMOI KIMUTAI
 
 https://kemboihosea.github.io/PIZZA-IN-SYSTEM/
 
+## TECHNOOGIES USED
+HTML
+
+CSS
+
+BOOTSRAP
+
+JAVASCRIPT
+
+
+
 
 ## LICENCE
 
