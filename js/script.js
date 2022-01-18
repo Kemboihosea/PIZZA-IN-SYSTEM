@@ -1,73 +1,59 @@
-var price , crust_price, topping_price ;
-let total = 0;
-function getorders( name,size,crust,topping, total ){
-  this.name = name;
-  this.size = size;
-  this.chrust=chrust;
-  this.cheese=cheese;
-}
-// proceed button
-$(document).ready(function
-  $("button.proceed").click(function(event){
-   let name = $(".name option:selected").val();
-   let size = $("#size option:selected").val();
-   let chrust = $("#crust option:selected").val();
-   let topping = [];
-   $.each($("input[name='toppings']:checked"), function(){            
-       topping.push($(this).val());
-   });
-   console.log(topping.join(", "));
+let orderButton = document.getElementById("order");
+let itemList = document.getElementById("toppings");
+let outputBox = document.getElementById("output");
+let outputTotalPrice = document.getElementById("total-price");
+let quantity = document.getElementById("quantity").value;
 
-   switch(size);
-    case "0":
-      price =0;
-    break;
-    case "large":
-       price = 1200;
-       console.log(price);
-     break;
-     case "medium":
-       price = 850;
-       console.log("The price is "+price);
-     break;
-     case "small":
-       price = 600;
-       console.log(price);
-     default:
-       console.log("error"); 
-   }
-   switch(chrust){
-      case "0":
-        chrust_price = 0;
-      break;
-      case "Crispy":
-        chrust_price = 200;
-      break;
-      case "Stuffed":
-        chrust_price = 250;
-      break;
-      case "Gluten-free":
-        chrust_price = 180;
-      break;
-      default:
-        console.log("No price"); 
-    }
-    let topping_value = topping.length*50;
-    console.log("toppins value" + topping_value);
+orderButton.addEventListener("click", function(event) {
+  event.preventDefault();
+  let collection = itemList.selectedOptions;
+  let output = "";
 
-    if((size == "0") && (chrust == "0")){
-      console.log("nothing selected");
-      $("button.proceed").show();
-      $("#information").show();
-      $("div.choise").hide();
-      alert("Please select pizza size and chrust"); 
+  let quantityItem = document.getElementById("quantity")
+  let quantityValue = Number(quantityItem.value)
+  console.log({ quantityValue })
+
+  for (let i=0; i<collection.length; i++) {
+    if (output === "") {
+      output = "Your order for the following Pizza has been placed: ";
     }
-    else{
-      $("button.proceed").hide();
-      $("#information").hide();
-      $("div.choise").slideDown(1000);
+    output += collection[i].label;
+
+    if (i === (collection.length - 2) && (collection.length < 3)) {
+      output +=  " and ";
+    } else if (i < (collection.length - 2)) {
+      output += ", ";
+    } else if (i === (collection.length - 2)) {
+      output += ", and ";
     }
-    total = price + crust
-    console.log(total);
-    let checkoutTotal =0;
-    checkoutTotal = checkoutTotal + total;
+  }
+
+  if (output === "") {
+    output = "You didn't order anything!";
+  }
+
+  let total
+  const selectedValue = itemList.options[itemList.selectedIndex].value;
+  // determine total price
+  if(selectedValue === 'cheese') {
+    console.log(`This shit`, quantityValue)
+    total = quantityValue * 2000
+  } 
+  else if(selectedValue === 'veggie') {
+    total = quantityValue * 1000
+  }
+  else if(selectedValue === 'meat') {
+    total = quantityValue * 900
+  }else if(selectedValue === 'pepperoni') {
+    total = quantityValue * 900;
+    console.log('')
+  }
+  else if(selectedValue === 'margherita') {
+    total = quantityValue * 900
+  }
+
+
+  outputBox.innerHTML = output;
+  outputTotalPrice.innerHTML = 'Ksh. ' + total
+
+});

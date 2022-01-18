@@ -38,7 +38,7 @@ a{
 /* about us styles */
 section{
     text-align: center;
-    background-image: url('images/pizza-3010062.jpg');
+    /* background-image: url('images/pizza-3010062.jpg'); */
     display: flex;
     align-items: center ;
     padding-top: 50px;

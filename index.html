@@ -24,10 +24,10 @@
         <div class="about-us">
             <h2><b>About Us</b></h2>
             <p> Pizza palace is a company located in Thika Superhighway</p>
-            <P>Our restaurant offers also fast foods like cheese ,Chipos
-              and drinks like soda we are capable of providing  to our
+            <p>Our restaurant offers also fast foods like cheese,Pepperoni,veggie,meat and margherita
+              like soda we are capable of providing  to our
             <p> customers the best services as we can</p>
-           <P>Take you time to order the service and we will serve you in time </P>
+           <p>Take you time to order the service and we will serve you in time </p>
         </div>
         <div class="right">
           <img src="./pizza.jpg">
@@ -46,23 +46,26 @@
               <h2 class="card-title">Pizza in Quantity</h2>
               <h2 class="card-title">Pizza</h2>
               <p class="card-text">Choose the toppings you want:</p>
-              <select required class="form-control" id="toppings">
-                <option></option>
-                <option value="cheese">Cheese (270</option>
-                <option value="chipo">chipo (150)</option>
-                <option value="crust">crust(170)</option>
-                <option value="Juices">Juices(85)</option>
+              <select id="toppings" >
+                <option value="cheese">Cheese</option>
+                <option value="pepperoni">Pepperoni</option>
+                <option value="veggie">Veggie</option>
+                <option value="meat">Meat</option>
+                <option value="margherita">Margherita </option>
               </select>
+            <input type="number" min="1" id="quantity" placeholder="Quantity of pizza" required>
+            <p id="order">
+              Order Now
+            </p>
+            <p id="output"></p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <button type="submit" class="order-button btn btn-dark" id="submit-pizza">Order Here</button>
-    <input type="number" id="amount" placeholder="Quantity of pizza" required>
   </form>
   <div class="col-xs-4" id="order">
-    <h2>Total:Ksh</h2>
+    <h2>Total: </h2><h3 id="total-price"></h3>
     <div id="deliver" class="deliver">
       <h2>Customers pay for delivery services</h2>
       <form id="address-form">
@@ -97,7 +100,7 @@
     </div>
   </div>
 
-  <script>script src="js/jquery-3.6.0.min.js"></script>
+  <!-- <script src="js/jquery-3.6.0.min.js"></script> -->
   <script src="js/script.js"></script></script>
  </body>
 </html>
