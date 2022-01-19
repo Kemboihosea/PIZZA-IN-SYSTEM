@@ -58,7 +58,7 @@ orderButton.addEventListener("click", function(event) {
 });
 
 function displayDestination(){
-  let destination = document.getElementById("destination").value;
+  var destination = document.getElementById("destination").value;
   document.getElementById("show_destination").innerHTML = destination;
   console.log(destination);
 }
