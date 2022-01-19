@@ -58,7 +58,6 @@ orderButton.addEventListener("click", function(event) {
 });
 
 function displayDestination(){
-  var destination = document.getElementById("destination").value;
-  document.getElementById("show_destination").innerHTML = destination;
-  console.log(destination);
+  var x = document.getElementById("destination").value;
+        document.getElementById("show_destination").innerHTML = x;
 }
