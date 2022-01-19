@@ -2,8 +2,10 @@ let orderButton = document.getElementById("order");
 let itemList = document.getElementById("toppings");
 let outputBox = document.getElementById("output");
 let outputTotalPrice = document.getElementById("total-price");
-let quantity = document.getElementById("quantity").  value;
-let inputBox = document.getElementname("");
+let quantity = document.getElementById("quantity").value;
+let inputBox = document.getElementsByName("");
+let sizeOfPizza = document.getElementById("pizza-size");
+let locationList = document.getElementById("address");
 
 
 orderButton.addEventListener("click", function(event) {
@@ -38,7 +40,6 @@ orderButton.addEventListener("click", function(event) {
   const selectedValue = itemList.options[itemList.selectedIndex].value;
   // determine total price
   if(selectedValue === 'cheese') {
-    console.log(`This shit`, quantityValue)
     total = quantityValue * 2000
   } 
   else if(selectedValue === 'veggie') {
@@ -53,12 +54,42 @@ orderButton.addEventListener("click", function(event) {
   else if(selectedValue === 'margherita') {
     total = quantityValue * 900
   }
+
+  // determine if to add on sizes assuming above is for type
+  let pizzaSizeName = sizeOfPizza.value
+  console.log({ pizzaSizeName })
+  if(pizzaSizeName === 'small') {
+    total -= 200
+  } else if(pizzaSizeName === 'large') {
+    total += 200
+  }
+  
+
+  
+  //calculate the price according to your location
+  const  selectDestination = locationList.options[locationList.selectedIndex].value;
+  // determine price
+  if(selectDestination === 'mirema'){
+    total += 200
+  }
+  else if(selectDestination === 'roysambu'){
+    total += 100
+  }else if(selectDestination === 'kasarani'){
+    total += 100
+  }
+  else if(selectDestination === 'thome'){
+    total += 200
+  }else if(selectDestination === 'gadern estate'){
+    total += 200
+  }
   outputBox.innerHTML = output;
   outputTotalPrice.innerHTML = 'Ksh. ' + total
-
 });
 
 function displayDestination(){
-  var x = document.getElementById("destination").value;
-        document.getElementById("show_destination").innerHTML = x;
+  var val = document.getElementById("address").value;
+  console.log({ val })
+  document.getElementById("show_destination").innerHTML = val;
+  alert ("WELCOME!");
 }
+
