@@ -22,6 +22,8 @@ CSS
 
 JAVASCRIPT
 
+JQUERY
+
 ## LICENCE
 
 
