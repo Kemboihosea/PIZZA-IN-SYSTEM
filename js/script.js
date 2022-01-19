@@ -2,7 +2,8 @@ let orderButton = document.getElementById("order");
 let itemList = document.getElementById("toppings");
 let outputBox = document.getElementById("output");
 let outputTotalPrice = document.getElementById("total-price");
-let quantity = document.getElementById("quantity").value;
+let quantity = document.getElementById("quantity").  value;
+
 
 orderButton.addEventListener("click", function(event) {
   event.preventDefault();
@@ -55,3 +56,9 @@ orderButton.addEventListener("click", function(event) {
   outputTotalPrice.innerHTML = 'Ksh. ' + total
 
 });
+
+function displayDestination(){
+  let destination = document.getElementById("destination").value;
+  document.getElementById("show_destination").innerHTML = destination;
+  console.log(destination);
+}
