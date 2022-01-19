@@ -3,6 +3,7 @@ let itemList = document.getElementById("toppings");
 let outputBox = document.getElementById("output");
 let outputTotalPrice = document.getElementById("total-price");
 let quantity = document.getElementById("quantity").  value;
+let inputBox = document.getElementname("");
 
 
 orderButton.addEventListener("click", function(event) {
