@@ -1,6 +1,7 @@
 body {
     font-family: 'Roboto' sans-serif;
     background-repeat: no-repeat;
+    background-color: coral;
     background-size: cover;
 }
 /* navbar styles */
