@@ -29,28 +29,17 @@
           <li><a href="#contacts">Contacts</a></li>
       </ul>
     </nav>
-    <section>
-
-        <div class="about-us">
-            <h2><b>About Us</b></h2>
-            <p>Pizza palace is a company located in Kasarani area
-            <p>Our restaurant offers also fast foods like cheese,Pepperoni,veggie,
-          <p>customers the best services as we can</p>
-        </div>
-        <div class="right">
-          <img src="./pizza.jpg">
-        </div>
-    </section>
-  <form class="form-group" id="menu" onsubmit="return false">
-    <div class="controls-top text-center" id="menu">
+    <section class="container">
+      <div class="about-us">
+        <h2><b>About Us</b></h2>
+        <p>Pizza palace is a company located in Kasarani area
+        <p>Our restaurant offers also fast foods like cheese,Pepperoni,veggie,
+        <p>customers the best services as we can</p>
     </div>
-    <div class="order">
-      <div class="row">
-        <div class="col-md-4 col-xs-9">
-          <div class="card">
-   <h2>Check orders here</h2>
-            <img src="pizza.jpg" class="card-img-top" alt="PIZZA">
-            <div class="card-body">
+      <div class="left">
+          <h2>Check orders here</h2>
+          <img src="pizza.jpg" class="card-img-top" alt="PIZZA">
+          <div class="card-body">
               <h2 class="card-title">Pizza in Quantity</h2>
               <h2 class="card-title">Pizza</h2>
               <label>pizza size:
@@ -59,85 +48,72 @@
                 <option value="medium">Medium</option>
                 <option value="large">Large</option>
               </label>
-                </select>
-              </select></br>
+            </select>
+            </select></br>
               <label>pizza types:
               <select id="pizza-types" >
-                <option value="italian">Italian</option>
-                <option value="pepperoni">Pepperoni</option>
-                <option value="veggie">Veggie</option>
-                <option value="meat">Meat</option>
-                <option value="margherita">Margherita </option>
-                </select>
-                </label>
-              </select></br>
-              <label>crust:
-              <select id="crust-types" >
-                <option value="crispy">Crispy</option>
-                <option value="stuffed">Stuffed</option>
-                <option value="gluten-free">Gluten-free</option>
-              </select>
-              </label>
-              <br />
-              <!-- <p class="card-text">Choose the toppings you want:</p> -->
-              <label>Toppings: 
-                <select id="toppings" >
-                  <option value="cheese">Cheese</option>
-                  <option value="pepperoni">Pepperoni</option>
-                  <option value="veggie">Veggie</option>
-                  <option value="meat">Meat</option>
-                  <option value="margherita">Margherita </option>
-                </select>
-              </label>
-              <br />
-             <label> No:
-              <input type="number" min="1" id="quantity" placeholder="Quantity of pizza" required><br>
-             </label> 
-            <p>Deliver</p>
-            Yes<input type="radio" id="yes" name="delivery" value="Yes"/><br>
-            No<input type="radio" id="no" name="delivery" value="No"><br />
-            <select id="address" >
-              <option value="mirema">Mirema</option>
-              <option value="roysambu">Roysambu</option>
-              <option value="gardern estate">Garden Estate</option>
-              <option value="kasarani">Kasarani</option>
-              <option value="thome">Thome</option>
+              <option value="italian">Italian</option></br>
+              <option value="pepperoni">Pepperoni</option>
+              <option value="veggie">Veggie</option>
+              <option value="meat">Meat</option>
+              <option value="margherita">Margherita </option>
             </select>
-            <h2>Thank you!your pizza is being delivered to your location:<span id="show_destination"></span></h2>
+            </label>
+            </select></br></div>
+            <label>crust:
+            <select id="crust-types" >
+              <option value="crispy">Crispy</option>
+              <option value="stuffed">Stuffed</option>
+              <option value="gluten-free">Gluten-free</option>
+            </select>
+          </label>
+          <br />
+          <!-- <p class="card-text">Choose the toppings you want:</p> -->
+          <label>Toppings: 
+            <select id="toppings" >
+              <option value="cheese">Cheese</option>
+              <option value="pepperoni">Pepperoni</option>
+              <option value="veggie">Veggie</option>
+              <option value="meat">Meat</option>
+              <option value="margherita">Margherita </option>
+            </select>
+          </label>
+          <br />
+        <label> No:
+          <input type="number" min="1" id="quantity" placeholder="Quantity of pizza" required><br>
+        </label> 
+          <h2>Choose Location</h2>
+          Yes<input type="radio" id="yes" name="delivery" value="Yes"/><br>
+          No<input type="radio" id="no" name="delivery" value="No"><br />
+          <select id="address" >
+            <option value="mirema">Mirema</option>
+            <option value="roysambu">Roysambu</option>
+            <option value="gardern estate">Garden Estate</option>
+            <option value="kasarani">Kasarani</option>
+            <option value="thome">Thome</option>
+          </select>
+          <h2>Thank you!your pizza is being delivered to your location:<span id="show_destination"></span></h2>
             <button id="order">
               Order Now
             </button>
             <p id="output"></p>
-            </div>
+          </div>
+          <div class="col-xs-4" id="order">
+            <h2>Total: </h2><h3 id="total-price"></h3>
+            <div id="deliver" class="deliver">
+              <h2>Customers pay for delivery services</h2>
+              <button onclick="displayDestination()">Checkout</button>
           </div>
         </div>
-      </div>
+        </div>
+    </section>
     </div>
-  </form>
-  <div class="col-xs-4" id="order">
-    <h2>Total: </h2><h3 id="total-price"></h3>
-    <div id="deliver" class="deliver">
-      <h2>Customers pay for delivery services</h2>
-      <form id="address-form" onsubmit="return false">
-          <button onclick="displayDestination()">Checkout</button>
-      </form>
-    </div>
-   </div>
-  <br>
-  <div class="container-fluid bg-default" id="contact">
-    <div class="controls-top ">
-      <h2>Contact Us</h2>
-      <p>Tell:0823078300</p>
-     <P>WElCOME ALL OUR ESTEEMED CUTOMERS</P>
-
-    </div>
-      </div>
-      <div class="col-md-1"></div>
-    </div>
-    </div>
-  </div>
-
-  <!-- <script src="js/jquery-3.6.0.min.js"></script> -->
+<div class="contacts">
+  <h2>Contact Us</h2>
+  <p>Tell:0823078300</p>
+  <p>WElCOME ALL OUR ESTEEMED CUTOMERS</p>
+</div>
+ <  !-- <script src="js/jquery-3.6.0.min.js"></script> -->
   <script src="js/script.js"></script></script>
  </body>
 </html>

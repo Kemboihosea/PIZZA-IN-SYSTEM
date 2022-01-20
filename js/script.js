@@ -90,6 +90,6 @@ function displayDestination(){
   var val = document.getElementById("address").value;
   console.log({ val })
   document.getElementById("show_destination").innerHTML = val;
-  alert ("WELCOME!");
+  alert ("Thank you for booking");
 }
 

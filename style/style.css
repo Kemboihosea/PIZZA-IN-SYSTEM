@@ -33,18 +33,17 @@ li{
 }
 a{
     color: white;
-    text-decoration: none;
+    text-decoration: no
 }
 
 /* about us styles */
-section{
+.container{
     text-align: center;
-    /* background-image: url('images/pizza-3010062.jpg'); */
     display: flex;
     align-items: center ;
-    padding-top: 50px;
-    padding-bottom: 50px;
-
+    padding-right: 20%;
+    padding-left: 20%;
+    font-size: larger;
 }
 section p {
     width: 80%;
@@ -57,14 +56,14 @@ section .right{
 }
 
 /* pizza images styles */
-.col-md-4{.right
+.col-md-4{
     display: inline-block;
     padding: 10px;
 }
-.form-group{
+/* .form-group{
     align-items: center;
     text-align: left;
-}
+} */
 .col-xs-4{
     align-items: center;
     text-align: center;
@@ -77,11 +76,13 @@ section .right{
 .card-img-top{
     height: 30vh;
 }
-#contact{
+.contacts{
     background-color:rgb(134, 24, 46);
     text-align: center;
     font-size: 20px;
     padding: 30px;
+    margin-bottom: 0;
+
 }
 .col-md-3{
     display: inline-block;
